@@ -1,0 +1,53 @@
+<dashboard script="export2excel_csv.js,controls.js">
+  <label>Export to Excel and CSV Demo Dashboard</label>
+  <row>
+    <panel>
+      <html>
+        <button id="export2Excel" class="btn btn-primary">Export to Excel</button>  <button id="export2CSV" class="btn btn-primary">Export to CSV</button>
+        <button style="float: right;" id="openmodal" class="btn">Script Details</button>
+      </html>
+      <table>
+        <title>Table data</title>
+        <search id="datasource">
+          <query>index=_internal | stats count by action, host | eval extra_chars=",/ma, &gt;&lt;s;-_+=1'"</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">20</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+      <html>
+        <div class="modal hide fade" id="scriptinfo">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+              <h3>Script Details</h3>
+          </div>
+          <div class="modal-body">
+              <a href="/static/app/export_excel_csv/export2excel_csv.js" target="_blank" class="btn btn-primary">Open Script</a>
+              <br/>
+<pre>
+Library documentation: <a href="https://www.npmjs.com/package/xlsx">https://www.npmjs.com/package/xlsx</a>
+
+Dependencies: under <code>$APP_HOME/appserver/static/src/</code>
+'jszip.js'
+'FileSaver.js'
+'Blob.js'
+'xlsx.core.min.js'
+
+Make sure that the directory of dependencies match on the script's require function.
+</pre>
+          </div>
+          <div class="modal-footer">
+              <a href="#" class="btn" id="modalclose">Close</a>
+          </div>
+        </div>
+      </html>
+    </panel>
+  </row>
+</dashboard>
