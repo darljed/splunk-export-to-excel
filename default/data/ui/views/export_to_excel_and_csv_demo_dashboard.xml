@@ -29,7 +29,7 @@
               <h3>Script Details</h3>
           </div>
           <div class="modal-body">
-              <a href="/static/app/export_excel_csv/export2excel_csv.js" target="_blank" class="btn btn-primary">Open Script</a>
+              <a href="/static/app/$env:app$/export2excel_csv.js" target="_blank" class="btn btn-primary">Open Script</a>
               <br/>
 <pre>
 Library documentation: <a href="https://www.npmjs.com/package/xlsx">https://www.npmjs.com/package/xlsx</a>
