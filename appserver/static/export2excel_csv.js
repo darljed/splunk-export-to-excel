@@ -3,17 +3,13 @@ require([
   'jquery',
   'splunkjs/mvc',
   'splunkjs/mvc/tableview',
-  '/static/app/export_excel_csv/src/jszip.js',
-  '/static/app/export_excel_csv/src/FileSaver.js',
-  '/static/app/export_excel_csv/src/Blob.js',
-  '/static/app/export_excel_csv/src/xlsx.core.min.js',
+  '/static/app/splunk-export-to-excel/src/jszip.js',
+  '/static/app/splunk-export-to-excel/src/FileSaver.js',
+  '/static/app/splunk-export-to-excel/src/Blob.js',
+  '/static/app/splunk-export-to-excel/src/xlsx.core.min.js',
   'splunkjs/mvc/simplexml/ready!'
 ], function(_, $, mvc, TableView) {
  console.log("Extractor is ready and onboard.");
- 
- 
- 
- 
  
  $("#export2Excel").click(function(){
    console.log("Exporting to excel");

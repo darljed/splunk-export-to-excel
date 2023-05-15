@@ -1,4 +1,4 @@
-<dashboard script="export2excel_csv.js,controls.js">
+<dashboard script="export2excel_csv.js,controls.js" version="1.1">
   <label>Export to Excel and CSV Demo Dashboard</label>
   <row>
     <panel>
